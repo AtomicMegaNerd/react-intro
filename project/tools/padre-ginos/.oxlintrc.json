@@ -9,7 +9,7 @@
   },
   "overrides": [
     {
-      "files": ["**/*.js"],
+      "files": ["**/*.js", "**/*.jsx"],
       "env": {
         "browser": true,
         "node": true
@@ -17,4 +17,3 @@
     }
   ]
 }
-
