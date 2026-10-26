@@ -3,8 +3,8 @@ const Pizza = (props) => {
   return React.createElement("div", {}, [
     React.createElement("h2", {}, props.name),
     React.createElement("p", {}, props.description),
-  ]);
-};
+  ])
+}
 
 const App = () => {
   // These are vanilla React Components. createElement takes the name of the element type, props,
@@ -31,11 +31,11 @@ const App = () => {
       name: "The Vegatarian Pizza",
       description: "Mozzerella Cheese, Green Peppers, Onions, Black Olives, Mushrooms",
     }),
-  ]);
-};
+  ])
+}
 
 // We wrap the root element from the DOM into a React root. If memory serves React uses a copy
 // of the DOM called the Shadow DOM...
-const container = document.getElementById("root");
-const root = ReactDOM.createRoot(container);
-root.render(React.createElement(App));
+const container = document.getElementById("root")
+const root = ReactDOM.createRoot(container)
+root.render(React.createElement(App))

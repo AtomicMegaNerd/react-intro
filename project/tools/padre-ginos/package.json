@@ -1,0 +1,18 @@
+{
+  "name": "Padre Gino's",
+  "version": "1.0.0",
+  "description": "An example app for the react course on masters.dev",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "oxfmt --write \"src/**/*.{js,jsx,css,html}\""
+  },
+  "devDependencies": {
+    "oxfmt": "^0.74.0",
+    "oxlint": "^1.89.0"
+  }
+}
