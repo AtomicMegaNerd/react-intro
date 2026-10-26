@@ -18,6 +18,6 @@ marksman = "latest"
 # The Rust based live-server is safer and faster
 "cargo:live-server" = "latest"
 
-[tools.rust]
-version = "stable"
-components = ["clippy", "rustfmt"]
+# Serve the current live-server
+[tasks]
+serve = "live-server -H 127.0.0.1 -p 3000 ."
