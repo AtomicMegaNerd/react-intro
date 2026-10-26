@@ -10,3 +10,10 @@ This is the course I am taking to learn React.
 [Course Project Files](https://github.com/btholt/citr-v9-project)
 
 ## React Resources
+
+[React](https://react.dev/)
+
+## Stages
+
+- [No Frills React](./project/no-frills-react/README.md)
+- [Tools](./project/tools/README.md)
