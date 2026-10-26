@@ -9,6 +9,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "oxlint",
     "format": "oxfmt --write \"src/**/*.{js,jsx,css,html}\""
   },
   "devDependencies": {
