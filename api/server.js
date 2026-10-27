@@ -1,8 +1,8 @@
 import fastify from "fastify";
 import fastifyStatic from "@fastify/static";
+import Database from "better-sqlite3";
 import path from "path";
 import { fileURLToPath } from "url";
-import { AsyncDatabase } from "promised-sqlite3";
 
 const server = fastify({
   logger: {
@@ -17,7 +17,15 @@ const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const db = await AsyncDatabase.open("./pizza.sqlite");
+const sqlite = new Database("./pizza.sqlite");
+const db = {
+  all: (sql, params = []) => sqlite.prepare(sql).all(...params),
+  get: (sql, params = []) => sqlite.prepare(sql).get(...params),
+  run: (sql, params = []) => {
+    const result = sqlite.prepare(sql).run(...params);
+    return { lastID: result.lastInsertRowid, changes: result.changes };
+  },
+};
 
 server.register(fastifyStatic, {
   root: path.join(__dirname, "public"),

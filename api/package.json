@@ -15,7 +15,9 @@
     "@fastify/static": "^10.1.8",
     "fastify": "^5.12.7",
     "pino-pretty": "11.2.2",
-    "promised-sqlite3": "2.1.0",
-    "sqlite3": "^6.0.1"
+    "better-sqlite3": "^13.0.3"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true
   }
 }
