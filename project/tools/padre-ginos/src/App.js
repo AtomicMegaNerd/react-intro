@@ -1,3 +1,6 @@
+import React from "react"
+import { createRoot } from "react-dom/client"
+
 // First React App :-P
 const Pizza = (props) => {
   return React.createElement("div", {}, [
@@ -37,5 +40,5 @@ const App = () => {
 // We wrap the root element from the DOM into a React root. If memory serves React uses a copy
 // of the DOM called the Shadow DOM...
 const container = document.getElementById("root")
-const root = ReactDOM.createRoot(container)
+const root = createRoot(container)
 root.render(React.createElement(App))
