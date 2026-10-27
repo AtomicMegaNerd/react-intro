@@ -1,6 +1,6 @@
 # Padre Ginos
 
-This is the app we work on throught the course. Each lesson will make changes and add notes
+This is the app we work on throughout the course. Each lesson will make changes and add notes
 
 ---
 
@@ -10,22 +10,22 @@ This is the app we work on throught the course. Each lesson will make changes an
 
 [React Without a Build Step](https://react-v9.holt.courses/lessons/no-frills-react/react-without-a-build-step)
 
-React is about building components. There are two types: **function componments** and **class componnets**.
+React is about building components. There are two types: **function components** and **class components**.
 
 #### React createElement
 
-if you pass a _string_ the function will return a DOM tag with kind matchig the string (`div`, `h1`, etc). The second object is the **props** where you can pass properties into the component. The third argument is one or more child elements. Note that the last two args are optional.
+if you pass a _string_ the function will return a DOM tag with kind matching the string (`div`, `h1`, etc). The second object is the **props** where you can pass properties into the component. The third argument is one or more child elements. Note that the last two args are optional.
 
-### Componments
+### Components
 
 [Components](https://react-v9.holt.courses/lessons/no-frills-react/components)
 
 React and ReactDOM are separate libraries because React is the universal library for all types of React including React Native whereas ReactDOM is focused on the browser.
 
 React combines the model, view, and controller into a single component, encapsulating all logic
-for a small piece of funcionality in one place.
+for a small piece of functionality in one place.
 
-You can acccess properties throuigh the `props` parameter passed into the component function.
+You can access properties through the `props` parameter passed into the component function.
 
 ---
 
@@ -47,12 +47,12 @@ You can acccess properties throuigh the `props` parameter passed into the compon
 #### npm
 
 ```bash
-npm init -y # Inits the projects with defaults
+npm init -y # Inits the project with defaults
 ```
 
 #### use of ECMAScript modules
 
-Of ourse we are 100% going to use ECMAScript modules as that is the modern way, esp. with [vite](https://vite.dev/)https://vite.dev.
+Of course we are 100% going to use ECMAScript modules as that is the modern way, esp. with [vite](https://vite.dev/).
 
 ```json
 {
@@ -68,7 +68,7 @@ In html script tag I have to specify that we are using modules:
 
 #### Vite 8
 
-Vite 8 uses rolldown instead of rollup. We'll have to keep an eye on that.
+Vite 8 uses Rolldown instead of Rollup. We'll have to keep an eye on that.
 
 #### React 19
 
