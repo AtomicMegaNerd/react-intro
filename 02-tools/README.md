@@ -1,6 +1,6 @@
 # Padre Ginos
 
-This is the app we work on throught the course
+This is the app we work on throught the course. Each lesson will make changes and add notes
 
 ---
 
@@ -43,3 +43,21 @@ You can acccess properties throuigh the `props` parameter passed into the compon
 
 > [!NOTE]
 > I diverge from the instructor in that I use `oxlint` and `oxfmt` instead of `prettier` and `eslint`. This is deliberate.
+
+#### npm
+
+```bash
+npm init -y # Inits the projects with defaults
+```
+
+#### use of ECMAScript modules
+
+Of ourse we are 100% going to use ECMAScript modules as that is the modern way, esp. with [vite](https://vite.dev/)https://vite.dev.
+
+```json
+{
+  "type": "module"
+}
+```
+
+---

@@ -4,7 +4,7 @@
   "description": "An example app for the react course on masters.dev",
   "keywords": [],
   "license": "ISC",
-  "author": "",
+  "author": "Chris Dunphy",
   "type": "module",
   "main": "index.js",
   "scripts": {
