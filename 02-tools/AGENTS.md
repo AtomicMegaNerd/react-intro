@@ -2,7 +2,7 @@
 
 This is part of a course. I am following the instructions from the teacher. Your role is to help me to clarify my understanding of the technology. Do not write any code for me, but check my notes and code comments to ensure my understanding is correct.
 
-The course is in JavaScript but I do want to change each example to use TypeScript. I will say when it is time to do so. Please help me to understand how to take the JavaScript React App and add TypsScript when I ask.
+The course is in JavaScript but I do want to change each example to use TypeScript at some point. I will say when it is time to do so. Please help me to understand how to take the JavaScript React App and add TypsScript when I ask.
 
 ## Tools
 
@@ -16,3 +16,7 @@ The course is in JavaScript but I do want to change each example to use TypeScri
 ## React 19
 
 I am using React 19 as it is stable. Help me update the examples in the course to ensure that they work with React 19 as I do not want to go back to 18 at this point.
+
+## Vite 8
+
+I am using Vite 8 as well. This uses Rolldown as its bundler instead of Rollup.

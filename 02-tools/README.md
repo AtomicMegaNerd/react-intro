@@ -60,4 +60,18 @@ Of ourse we are 100% going to use ECMAScript modules as that is the modern way, 
 }
 ```
 
+In html script tag I have to specify that we are using modules:
+
+```html
+<script type="module" src="./src/App.js"></script>
+```
+
+#### Vite 8
+
+Vite 8 uses rolldown instead of rollup. We'll have to keep an eye on that.
+
+#### React 19
+
+I am using React 19. We will have to keep an eye on that.
+
 ---
