@@ -19,6 +19,7 @@ We will store each stage of work in its own git branch. The branch names are:
 
 - `02-tools`
 - `03-core-react-concepts`
+- `04-react-hooks`
 
 After each lesson we will also merge the latest work into `main`.
 
