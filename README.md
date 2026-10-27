@@ -2,20 +2,24 @@
 
 This is the course I am taking to learn React.
 
----
-
-## Course Resources
-
 - [Masters.dev Course Website](https://master.dev/courses/complete-react-v9/)
 - [Brian Holt Course Website](https://react-v9.holt.courses/)
 - [Course Repo](https://github.com/btholt/complete-intro-to-react-v9)
-- [Course Project Files](https://github.com/btholt/citr-v9-project)
 
 ---
 
-## Padre Ginos
+## Padre Ginos Example Project
 
-This is the app we work on throughout the course. Each lesson will make changes and add notes
+This is the app we work on throughout the course. Each lesson will make changes and add notes.
+
+- [Course Project Files](https://github.com/btholt/citr-v9-project)
+
+We will store each stage of work in its own git branch. The branch names are:
+
+- `02-tools`
+- `03-core-react-concepts`
+
+After each lesson we will also merge the latest work into `main`.
 
 ---
 
@@ -132,6 +136,8 @@ curly braces, so:
 import { Pizza } from "./Pizza"
 ```
 
+See [export MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+
 ### No Longer Required
 
 Tooling handles this import for us now:
@@ -148,6 +154,12 @@ To turn on the react plug-in for `oxlint` add "react" to [.oxlintrc.json](./.oxl
 {
   "plugins": ["eslint", "typescript", "unicorn", "oxc", "react"]
 }
+```
+
+### JSX requires self-closing tags
+
+```jsx
+<input />
 ```
 
 See [oxlint built-in plug-ins](https://oxc.rs/docs/guide/usage/linter/plugins.html)
