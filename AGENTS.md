@@ -9,6 +9,7 @@ The course is in JavaScript but I do want to change each example to use TypeScri
 **Always** follow the rules below:
 
 - Do point out spelling mistakes and typos
+- Do not change wording. You can only fix spelling mistakes and typos. I do the writing.
 - Do not nitpick over minor choices in wording. I often choose words not for exact precision, but because I understand them.
 - Do internalize this principle: pedantry is antithetical to learning.
 
