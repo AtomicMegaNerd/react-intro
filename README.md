@@ -15,5 +15,5 @@ This is the course I am taking to learn React.
 
 ## Stages
 
-- [No Frills React](./project/no-frills-react/README.md)
-- [Tools](./project/tools/README.md)
+- [No Frills React](./01-no-frills-react/README.md)
+- [Tools](./02-tools/README.md)

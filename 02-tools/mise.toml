@@ -1,0 +1,8 @@
+[tools]
+node = "lts"
+
+# emmet-language-server
+"npm:@olrtg/emmet-language-server" = "latest"
+
+# TypeScript
+"npm:typescript" = "latest"
