@@ -13,6 +13,7 @@ This is the course I am taking to learn React.
 This is the app we work on throughout the course. Each lesson will make changes and add notes.
 
 - [Course Project Files](https://github.com/btholt/citr-v9-project)
+- The api directory in this project is copied from the citr-v9-project repo above.
 
 We will store each stage of work in its own git branch. The branch names are:
 
