@@ -115,6 +115,9 @@ const Pizza = (props) => {
 }
 ```
 
+> [!NOTE]
+> Besides `className` `htmlFor` is required when working with form labels for similar reasons.
+
 ### Default Export
 
 Let's you import without `{ }`.
@@ -163,3 +166,22 @@ To turn on the react plug-in for `oxlint` add "react" to [.oxlintrc.json](./.oxl
 ```
 
 See [oxlint built-in plug-ins](https://oxc.rs/docs/guide/usage/linter/plugins.html)
+
+### Root Changes
+
+We render the React component using the tag syntax. Interesting!
+
+```jsx
+// This looks strange! Wow!
+root.render(<App />)
+```
+
+### Casing
+
+In React ... upper case is used for React components and lower case is used for standard html (DOM)
+tags.
+
+```jsx
+<Pizza /> // React component
+<div /> // Standard HTML tag
+```
