@@ -90,3 +90,9 @@ Vite 8 uses Rolldown instead of Rollup. We'll have to keep an eye on that.
 I am using React 19. We will have to keep an eye on that.
 
 ---
+
+## Lesson 3: Core React Concepts
+
+### JSX
+
+[Course Notes](https://react-v9.holt.courses/lessons/core-react-concepts/jsx)
