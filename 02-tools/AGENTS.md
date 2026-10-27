@@ -4,6 +4,14 @@ This is part of a course. I am following the instructions from the teacher. Your
 
 The course is in JavaScript but I do want to change each example to use TypeScript at some point. I will say when it is time to do so. Please help me to understand how to take the JavaScript React App and add TypsScript when I ask.
 
+## Rules
+
+**Always** follow the rules below:
+
+- Do point out spelling mistakes and typos
+- Do not nitpick over minor choices in wording. I often choose words not for exact precision, but because I understand them.
+- Do internalize this principle: pedantry is antithetical to learning.
+
 ## Tools
 
 - vite
