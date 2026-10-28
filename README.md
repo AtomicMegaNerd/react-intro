@@ -206,3 +206,4 @@ We don't know when React will choose to render/re-render our components. React i
 - Named functions will show up in stack traces so are good to use for that reason.
 - The `value` attribute sets the current value of the input element to match the component's state.
 - Hooks can never be inside conditionals or loops. Every hook must be run in the same order.
+- `useState` is by far the most commonly used hook in React.

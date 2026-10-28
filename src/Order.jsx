@@ -6,7 +6,7 @@ import { useState } from "react"
 export default function Order() {
   // Rules:
   // React depends on the order we declare these. Never put these inside of loops or
-  // conditionals.
+  // conditionals. They must run in the same order each time.
   const [pizzaType, setPizzaType] = useState("pepperoni")
   const [pizzaSize, setPizzaSize] = useState("M")
 
