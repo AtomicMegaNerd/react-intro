@@ -231,8 +231,8 @@ const Pizza = (props) => {
       <h1>{props.name}</h1>
       <p>{props.description}</p>
       <img src={props.image} alt={props.name} />
-      // This is also okay because this impure function is not called here, react calls it in
-      response // to events which is separate from the rendering of the component
+      {/* This is also okay because this impure function is not called here, react calls it in
+       response to events which is separate from the rendering of the component */}
       <button onClick={superImpureFunc}>I am not a Monad</button>
     </div>
   )
