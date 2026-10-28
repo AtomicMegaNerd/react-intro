@@ -1,10 +1,15 @@
 import Pizza from "./Pizza"
+import { useState } from "react"
 
 // Named function (not arrow function) when the app crashes the Order _function_ will show up in
 // the stack trace.
 export default function Order() {
-  const pizzaType = "pepperoni"
-  const pizzaSize = "M"
+  // Rules:
+  // React depends on the order we declare these. Never put these inside of loops or
+  // conditionals.
+  const [pizzaType, setPizzaType] = useState("pepperoni")
+  const [pizzaSize, setPizzaSize] = useState("M")
+
   return (
     <div className="order">
       <h2>Create Order</h2>
@@ -12,7 +17,11 @@ export default function Order() {
         <div>
           <div>
             <label htmlFor="pizza-type">Pizza Type</label>
-            <select name="pizza-type" value={pizzaType}>
+            <select
+              onChange={(e) => setPizzaType(e.target.value)}
+              name="pizza-type"
+              value={pizzaType}
+            >
               <option value="pepperoni">The Pepperoni Pizza</option>
               <option value="hawaiian">The Hawaiian Pizza</option>
               <option value="big_meat">The Big Meat Pizza</option>
@@ -24,6 +33,7 @@ export default function Order() {
               <span>
                 <input
                   checked={pizzaSize === "S"}
+                  onChange={(e) => setPizzaSize(e.target.value)}
                   type="radio"
                   name="pizza-size"
                   value="S"
@@ -34,6 +44,7 @@ export default function Order() {
               <span>
                 <input
                   checked={pizzaSize === "M"}
+                  onChange={(e) => setPizzaSize(e.target.value)}
                   type="radio"
                   name="pizza-size"
                   value="M"
@@ -44,6 +55,7 @@ export default function Order() {
               <span>
                 <input
                   checked={pizzaSize === "L"}
+                  onChange={(e) => setPizzaSize(e.target.value)}
                   type="radio"
                   name="pizza-size"
                   value="L"

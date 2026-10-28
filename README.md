@@ -192,6 +192,8 @@ tags.
 
 ## Hooks
 
+[Course Hooks](https://react-v9.holt.courses/lessons/core-react-concepts/hooks)
+
 ### Creating the Order Component
 
 We don't know when React will choose to render/re-render our components. React is going to try and re-render only when it is necessary. We want avoid putting side effects in our components partly for that reason.
@@ -203,3 +205,4 @@ We don't know when React will choose to render/re-render our components. React i
 - We want to avoid side effects and mutable state in our render function. Keep the components pure.
 - Named functions will show up in stack traces so are good to use for that reason.
 - The `value` attribute sets the current value of the input element to match the component's state.
+- Hooks can never be inside conditionals or loops. Every hook must be run in the same order.
