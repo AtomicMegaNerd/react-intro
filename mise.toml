@@ -1,2 +1,4 @@
 [tools]
 node = "lts"
+
+"npm:@olrtg/emmet-language-server" = "latest"
