@@ -42,3 +42,9 @@ Vite 8 uses Rolldown instead of Rollup. We'll have to keep an eye on that.
 ### React 19
 
 I am using React 19. We will have to keep an eye on that.
+
+## React Developer Tools
+
+[Course Notes](https://react-v9.holt.courses/lessons/core-react-concepts/dev-tools)
+
+[React Developer Tools](https://react.dev/learn/react-developer-tools)
