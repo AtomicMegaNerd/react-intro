@@ -101,18 +101,21 @@ export default function Order() {
           </div>
           <button type="submit">Add to Cart</button>
         </div>
-        {loading ? (
-          <h3>LOADING …</h3>
-        ) : (
-          <div className="order-pizza">
-            <Pizza
-              name={selectedPizza.name}
-              description={selectedPizza.description}
-              image={selectedPizza.image}
-            />
-            <p>{price}</p>
-          </div>
-        )}
+        {
+          // Ternaries are expressions, not statements.
+          loading ? (
+            <h3>LOADING …</h3>
+          ) : (
+            <div className="order-pizza">
+              <Pizza
+                name={selectedPizza.name}
+                description={selectedPizza.description}
+                image={selectedPizza.image}
+              />
+              <p>{price}</p>
+            </div>
+          )
+        }
       </form>
     </div>
   )
