@@ -1,5 +1,5 @@
-import Pizza from "./Pizza"
 import { useEffect, useState } from "react"
+import Pizza from "./Pizza"
 
 // This Internationalization code is now built-in to browsers
 const intl = new Intl.NumberFormat("en-ca", {
@@ -19,11 +19,10 @@ export default function Order() {
   const [loading, setLoading] = useState(true)
 
   let price, selectedPizza
-
   if (!loading) {
     // This will be the correct pizza object from our API
     selectedPizza = pizzaTypes.find((pizza) => pizzaType === pizza.id)
-    price = intl.format(selectedPizza.sizes[pizzaSize])
+    price = intl.format(selectedPizza.sizes ? selectedPizza.sizes[pizzaSize] : "")
   }
 
   // This is an impure function, we don't want to run this every time the component is rendered
@@ -102,14 +101,18 @@ export default function Order() {
           </div>
           <button type="submit">Add to Cart</button>
         </div>
-        <div className="order-pizza">
-          <Pizza
-            name={selectedPizza.name}
-            description={selectedPizza.description}
-            image={selectedPizza.image}
-          />
-          <p>{price}</p>
-        </div>
+        {loading ? (
+          <h3>LOADING …</h3>
+        ) : (
+          <div className="order-pizza">
+            <Pizza
+              name={selectedPizza.name}
+              description={selectedPizza.description}
+              image={selectedPizza.image}
+            />
+            <p>{price}</p>
+          </div>
+        )}
       </form>
     </div>
   )
