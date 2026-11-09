@@ -28,8 +28,8 @@ const [pizzaSize, setPizzaSize] = useState("M")
 > See [Order.jsx](../src/Order.jsx) for the full example.
 
 - Called with a default value.
-- Returns an aray with the current state value and a setter to update the state.
-- Calling the setter causes the component to re-render with the new state value.
+- Returns an array with the current state value and a setter to update the state.
+- Calling the setter requests an update to the state of specified variable. The component then will re-render with the new state value.
 
 ## More Notes on React Components
 
@@ -60,7 +60,7 @@ const Pizza = (props) => {
       <h1>{props.name}</h1>
       <p>{props.description}</p>
       <img src={props.image} alt={props.name} />
-      {/* This is also okay because this impure function is not called here, react calls it in
+      {/* This is also okay because this impure function is not called here, React calls it in
        response to events which is separate from the rendering of the component */}
       <button onClick={superImpureFunc}>I am not a Monad</button>
     </div>
@@ -84,4 +84,26 @@ Think of two-way data binding as automatic synchronization in both directions:
 
 ## `useEffect` Hook
 
-- This hook is used for managing a side effect, like an API request.
+[Course Notes](https://react-v9.holt.courses/lessons/core-react-concepts/effects)
+
+The `useEffect` hook is used for managing a side effect, like an API request. This hook allows execution of code at specific points in a components lifecycle.
+
+```jsx
+// This is an impure function, we don't want to run this every time the component is rendered
+async function fetchPizzaTypes() {
+  const pizzasRes = await fetch("/api/pizzas")
+  const pizzasJson = await pizzasRes.json()
+  setPizzaTypes(pizzasJson)
+  setLoading(false)
+}
+
+// The second argument specifies that changes to which variables should trigger useEffect. If
+// we leave this blank useEffect will be called each time the component renders. An empty array
+// means we trigger useEffect only once.
+useEffect(() => {
+  fetchPizzaTypes()
+}, [])
+```
+
+> [!NOTE]
+> You cannot make a direct async call to an async function with a return value as they always return a `Promise`. The `useEffect` hook always expects `undefined` or a callback function to be returned. To work around this, wrap your async calls in an async function that does not return anything.
