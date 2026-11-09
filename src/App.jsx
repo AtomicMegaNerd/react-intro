@@ -1,3 +1,4 @@
+import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import Order from "./Order"
 
@@ -16,4 +17,8 @@ const container = document.getElementById("root")
 const root = createRoot(container)
 
 // This looks strange! Wow!
-root.render(<App />)
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
