@@ -1,5 +1,11 @@
 import Pizza from "./Pizza"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+// This Internationalization code is now built-in to browsers
+const intl = new Intl.NumberFormat("en-ca", {
+  style: "currency",
+  currency: "CAD",
+})
 
 // Named function (not arrow function) when the app crashes the Order _function_ will show up in
 // the stack trace.
@@ -7,8 +13,33 @@ export default function Order() {
   // Rules:
   // React depends on the order we declare these. Never put these inside of loops or
   // conditionals. They must run in the same order each time.
+  const [pizzaTypes, setPizzaTypes] = useState([])
   const [pizzaType, setPizzaType] = useState("pepperoni")
   const [pizzaSize, setPizzaSize] = useState("M")
+  const [loading, setLoading] = useState(true)
+
+  let price, selectedPizza
+
+  if (!loading) {
+    // This will be the correct pizza object from our API
+    selectedPizza = pizzaTypes.find((pizza) => pizzaType === pizza.id)
+    price = intl.format(selectedPizza.sizes[pizzaSize])
+  }
+
+  // This is an impure function, we don't want to run this every time the component is rendered
+  async function fetchPizzaTypes() {
+    const pizzasRes = await fetch("/api/pizzas")
+    const pizzasJson = await pizzasRes.json()
+    setPizzaTypes(pizzasJson)
+    setLoading(false)
+  }
+
+  // The second argument specifies that changes to which variables should trigger useEffect. If
+  // we leave this blank useEffect will be called each time the component renders. An empty array
+  // means we trigger useEffect only once.
+  useEffect(() => {
+    fetchPizzaTypes()
+  }, [])
 
   return (
     <div className="order">
@@ -22,9 +53,11 @@ export default function Order() {
               name="pizza-type"
               value={pizzaType}
             >
-              <option value="pepperoni">The Pepperoni Pizza</option>
-              <option value="hawaiian">The Hawaiian Pizza</option>
-              <option value="big_meat">The Big Meat Pizza</option>
+              {pizzaTypes.map((pizza) => (
+                <option key={pizza.id} value={pizza.id}>
+                  {pizza.name}
+                </option>
+              ))}
             </select>
           </div>
           <div>
