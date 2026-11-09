@@ -40,7 +40,7 @@ export default function Order() {
     // NOTE: This is code from the course, so overruling the linter for now...
     // oxlint-disable-next-line react/set-state-in-effect
     fetchPizzaTypes()
-  }, [])
+  }, []) // <- don't forget to set properties here or set it to []!
 
   return (
     <div className="order">
