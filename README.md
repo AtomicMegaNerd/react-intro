@@ -26,3 +26,4 @@ lesson we will merge to the `main` branch.
 | Tools   | [02-Tools](./notes/02-tools.md)     | `02-tools`               |
 | JSX     | [03-JSX](./notes/03-jsx.md)         | `03-core-react-concepts` |
 | Hooks   | [04-Hooks](./notes/04-hooks.md)     | `04-react-hooks`         |
+| Effects | [05-Effects](./notes/05-effects.md) | `05-react-effects`       |
