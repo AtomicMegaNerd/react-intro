@@ -20,10 +20,10 @@ This is the app we work on throughout the course. Each lesson will make changes 
 Each lesson will have its own Git Branch and its own Link to the notes. After each
 lesson we will merge to the `main` branch.
 
-| Lesson  | Notes Link                          | Git Branch               |
-| ------- | ----------------------------------- | ------------------------ |
-| Welcome | [01-Welcome](./notes/01-welcome.md) | N/A                      |
-| Tools   | [02-Tools](./notes/02-tools.md)     | `02-tools`               |
-| JSX     | [03-JSX](./notes/03-jsx.md)         | `03-core-react-concepts` |
-| Hooks   | [04-Hooks](./notes/04-hooks.md)     | `04-react-hooks`         |
-| Effects | [05-Effects](./notes/05-effects.md) | `05-react-effects`       |
+| Lesson  | Notes Link                          | Git Branch                                                                                                      |
+| ------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Welcome | [01-Welcome](./notes/01-welcome.md) | N/A                                                                                                             |
+| Tools   | [02-Tools](./notes/02-tools.md)     | [`02-tools`](https://github.com/AtomicMegaNerd/react-intro/tree/02-tools)                                       |
+| JSX     | [03-JSX](./notes/03-jsx.md)         | [`03-core-react-concepts`](https://github.com/AtomicMegaNerd/react-intro/tree/03-core-react-concepts)           |
+| Hooks   | [04-Hooks](./notes/04-hooks.md)     | [`04-react-hooks`](https://github.com/AtomicMegaNerd/react-intro/tree/04-react-hooks)                           |
+| Effects | [05-Effects](./notes/05-effects.md) | [`05-react-effect`](https://github.com/AtomicMegaNerd/react-intro/tree/05-react-effect)                         |
