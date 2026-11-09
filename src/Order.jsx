@@ -38,6 +38,8 @@ export default function Order() {
   // we leave this blank useEffect will be called each time the component renders. An empty array
   // means we trigger useEffect only once.
   useEffect(() => {
+    // NOTE: This is code from the course, so overruling the linter for now...
+    // oxlint-disable-next-line react/set-state-in-effect
     fetchPizzaTypes()
   }, [])
 
@@ -102,11 +104,11 @@ export default function Order() {
         </div>
         <div className="order-pizza">
           <Pizza
-            name="Pepperoni"
-            description="Mozzarella Cheese, Pepperoni"
-            image="/public/pizzas/pepperoni.webp"
+            name={selectedPizza.name}
+            description={selectedPizza.description}
+            image={selectedPizza.image}
           />
-          <p>$13.37</p>
+          <p>{price}</p>
         </div>
       </form>
     </div>
