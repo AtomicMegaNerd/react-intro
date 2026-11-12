@@ -15,6 +15,25 @@ This is the app we work on throughout the course. Each lesson will make changes 
 - [Course Project Files](https://github.com/btholt/citr-v9-project)
 - The api directory in this project is copied from the citr-v9-project repo above.
 
+## Bun Command Reference
+
+| Task                                               | Command                    | Notes                                                                  |
+| -------------------------------------------------- | -------------------------- | ---------------------------------------------------------------------- |
+| Install React app dependencies                     | `bun install`              | Run from the repository root.                                          |
+| Start the React dev server                         | `bun run dev`              | Run from the repository root.                                          |
+| Build the React app                                | `bun run build`            | Run from the repository root.                                          |
+| Preview the production build                       | `bun run preview`          | Build first with `bun run build`.                                      |
+| Lint the React app                                 | `bun run lint`             | Run from the repository root.                                          |
+| Format the React app                               | `bun run format`           | Formats files under `src/`.                                            |
+| Run React tests                                    | `bun run test`             | The test script is a placeholder until Vitest is set up in the course. |
+| Install API dependencies                           | `bun install`              | Run from `api/`.                                                       |
+| Start the API in watch mode                        | `bun run dev`              | Run from `api/`.                                                       |
+| Start the API without watch mode                   | `bun run start`            | Run from `api/`.                                                       |
+| See outdated dependencies                          | `bun outdated`             | Run in the project (`.` or `api/`) you want to check.                  |
+| Update a package within its declared version range | `bun update <package>`     | Run in the project that uses the package.                              |
+| Update a package to the latest version             | `bun add <package>@latest` | Use `bun add -d <package>@latest` for a dev dependency.                |
+| Remove a package                                   | `bun remove <package>`     | Run in the project that uses the package.                              |
+
 ## Lessons
 
 Each lesson will have its own Git Branch and its own Link to the notes. After each
