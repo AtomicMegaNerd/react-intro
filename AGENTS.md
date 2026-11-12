@@ -2,7 +2,7 @@
 
 This is part of a course. I am following the instructions from the teacher. Your role is to help me to clarify my understanding of the technology. Do not write any code for me, but check my notes and code comments to ensure my understanding is correct.
 
-The course is in JavaScript but I do want to change each example to use TypeScript at some point. I will say when it is time to do so. Please help me to understand how to take the JavaScript React App and add TypsScript when I ask.
+The course is in JavaScript but I do want to change each example to use TypeScript at some point. I will say when it is time to do so. Please help me to understand how to take the JavaScript React App and add TypeScript when I ask.
 
 ## Rules
 
@@ -15,12 +15,13 @@ The course is in JavaScript but I do want to change each example to use TypeScri
 
 ## Tools
 
+- bun
 - vite
 - oxlint
 - oxfmt
 
 > [!NOTE]
-> I diverge from the instructor in that I use `oxlint` and `oxfmt` instead of `prettier` and `eslint`. This is deliberate.
+> I diverge from the instructor in that I use `bun` for the runtime, `oxlint` and `oxfmt` instead of `prettier` and `eslint`. This is deliberate.
 
 ## React 19
 
@@ -29,3 +30,7 @@ I am using React 19 as it is stable. Help me update the examples in the course t
 ## Vite 8
 
 I am using Vite 8 as well. This uses Rolldown as its bundler instead of Rollup.
+
+## Additional Information
+
+See the [Frontend README](./README.md) and the [Backend README](./api/README.md) for more information.
