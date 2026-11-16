@@ -53,7 +53,7 @@ export default function Order() {
           e.preventDefault()
           // This is roughly equivalent to something like ++ in haskell in that ...cart adds all
           // of the elements from cart into a new array, adds the items defined in the remaining
-          // elements (in this case one) and returns a new list. This is not a function it is an
+          // elements (in this case one) and returns a new array. This is not a function it is an
           // array definition, it just feels like a function kind of. This syntax is actually
           // pretty ridiculous if I am being honest.
           setCart([...cart, { pizza: selectedPizza, size: pizzaSize, price }])

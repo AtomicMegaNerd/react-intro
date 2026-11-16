@@ -27,3 +27,24 @@ useDebugValue(pizzaOfTheDay ? `${pizzaOfTheDay.id}: ${pizzaOfTheDay.name}` : "lo
 ```
 
 You will see the string in the developer tools for that component. But the instructor uses this sparingly.
+
+## A note on the `spread` operator
+
+```js
+// This is roughly equivalent to something like ++ in haskell in that ...cart adds all
+// of the elements from cart into a new array, adds the items defined in the remaining
+// elements (in this case one) and returns a new array. This is not a function it is an
+// array definition, it just feels like a function kind of. This syntax is actually
+// pretty ridiculous if I am being honest.
+setCart([...cart, { pizza: selectedPizza, size: pizzaSize, price }])
+```
+
+Other examples:
+
+```js
+// Add all items from oldItems along with 9, 10, 11, 12 to a new array
+const newItems = [...oldItems, 9, 10, 11, 12]
+
+// Add all items both oldItems arrays into a new array
+const newItems = [...oldItems1, ...oldItems2]
+```
