@@ -1,23 +1,13 @@
 # Custom Hooks
 
-## Dev Tools
+Hooks are composable. Custom hooks are dirt simple. They are just functions that call other hooks. There is no special sauce or magic.
 
-### Development vs. Production mode
+For an example see [usePizzaOfTheDay](../src/usePizzaOfTheDay.js)
 
-> [!IMPORTANT] always remember to switch to `production` mode when deploying to production or performance can really suffer.
+> [!IMPORTANT]
+> Remember that hooks must be called in the same order each time, at the top level of the function.
 
-- `NODE_ENV` tells that tools if we are in `development` or `production` mode. Vite handles this for us automatically.
+Opinions are sharply divided on where and how to use custom hooks.
 
-### Strict Mode
-
-Strict mode is an extra set of checks that React can perform. It warns us about deprecated API's for example. It does re-render your components twice. This catches some effects related bugs.
-
-```jsx
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
-```
-
-### Dev Tools
+- Some argue that put all effects in custom hooks. The idea here is that these are easily testable in isolation.
+- Others argue that all effects should go directly into components. The instructor leans more toward the first style, but this is not a hard fast rule.
