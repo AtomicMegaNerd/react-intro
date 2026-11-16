@@ -12,7 +12,7 @@ const PizzaOfTheDay = () => {
     return <div>Loading...</div>
   }
   return (
-    <div className="pizzaOfTheDay">
+    <div className="pizza-of-the-day">
       <h2>Pizza of the Day</h2>
       <div>
         <div className="pizza-of-the-day-info">
