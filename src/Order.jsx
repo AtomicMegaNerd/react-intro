@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Pizza from "./Pizza"
+import Cart from "./Cart"
 
 // This Internationalization code is now built-in to browsers
 const intl = new Intl.NumberFormat("en-ca", {
@@ -16,6 +17,7 @@ export default function Order() {
   const [pizzaTypes, setPizzaTypes] = useState([])
   const [pizzaType, setPizzaType] = useState("pepperoni")
   const [pizzaSize, setPizzaSize] = useState("M")
+  const [cart, setCart] = useState([])
   const [loading, setLoading] = useState(true)
 
   let price, selectedPizza
@@ -45,7 +47,13 @@ export default function Order() {
   return (
     <div className="order">
       <h2>Create Order</h2>
-      <form>
+      <form
+        onSubmit={(e) => {
+          // NOTE: This prevents the browsers built-in submission system from firing when the submit button is clicked. Only this React onSubmit handler will fire. Otherwise both would fire.
+          e.preventDefault()
+          setCart([...cart, { pizza: selectedPizza, size: pizzaSize, price }])
+        }}
+      >
         <div>
           <div>
             <label htmlFor="pizza-type">Pizza Type</label>
