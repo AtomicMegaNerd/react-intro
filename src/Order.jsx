@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import Pizza from "./Pizza"
 import Cart from "./Cart"
+import { CartContext } from "./contexts"
 
 // This Internationalization code is now built-in to browsers
 const intl = new Intl.NumberFormat("en-ca", {
@@ -17,7 +18,8 @@ export default function Order() {
   const [pizzaTypes, setPizzaTypes] = useState([])
   const [pizzaType, setPizzaType] = useState("pepperoni")
   const [pizzaSize, setPizzaSize] = useState("M")
-  const [cart, setCart] = useState([])
+  // This now comes from the context
+  const [cart, setCart] = useContext(CartContext)
   const [loading, setLoading] = useState(true)
 
   async function checkout() {

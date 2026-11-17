@@ -1,15 +1,24 @@
-import { StrictMode } from "react"
+import { useState, StrictMode } from "react"
 import { createRoot } from "react-dom/client"
-import PizzaOfTheDay from "./PizzaOfTheDay"
+import Header from "./Header"
 import Order from "./Order"
+import PizzaOfTheDay from "./PizzaOfTheDay"
+import { CartContext } from "./contexts"
 
+// Note in pre-React 19 we need <CartContext.Provider>
 const App = () => {
+  const cartHook = useState([])
+  // We can pass in the whole hook (both the var and the setter into the context
   return (
-    <div>
-      <h1 className="logo">Padre Gino's - Order Now</h1>
-      <Order />
-      <PizzaOfTheDay />
-    </div>
+    <StrictMode>
+      <CartContext value={cartHook}>
+        <div>
+          <Header />
+          <Order />
+          <PizzaOfTheDay />
+        </div>
+      </CartContext>
+    </StrictMode>
   )
 }
 
@@ -19,8 +28,4 @@ const container = document.getElementById("root")
 const root = createRoot(container)
 
 // This looks strange! Wow!
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+root.render(<App />)
