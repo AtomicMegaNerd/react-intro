@@ -1,5 +1,7 @@
 # Custom Hooks
 
+[Course Notes](https://react-v9.holt.courses/lessons/core-react-concepts/custom-hooks)
+
 Hooks are composable. Custom hooks are dirt simple. They are just functions that call other hooks. There is no special sauce or magic.
 
 For an example see [usePizzaOfTheDay](../src/usePizzaOfTheDay.js)

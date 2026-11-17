@@ -1,5 +1,7 @@
 # Handling User Input
 
+[Course Notes](https://react-v9.holt.courses/lessons/core-react-concepts/handling-user-inputs)
+
 ## Why `onSubmit` instead of `onClick` for the form?
 
 This is because onSubmit handles both mouse clicks and using enter while also working better

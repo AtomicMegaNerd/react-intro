@@ -1,5 +1,7 @@
 # Context
 
+[Course Notes](https://react-v9.holt.courses/lessons/core-react-concepts/context)
+
 > [!IMPORTANT]
 > Limit the use of contexts to situations where you need to share state in multiple places, like a user who is logged into your website for example. The instructors urges care here as context makes React easier to write but _much_ harder to debug.
 
