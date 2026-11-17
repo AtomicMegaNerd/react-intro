@@ -28,7 +28,7 @@ const newItems = [...oldItems1, ...oldItems2]
 
 ## Using array index for key - when is it okay?
 
-In [Cart.jsx](../src/Cart.jsx) array index was used as the key. According to the inustructor this is okay when there are no unique identifiers avaialble for the list items. For example the list items may not be unique (multiple identical items in the cart) and no other unique property exists to differentiate them.
+In [Cart.jsx](../src/Cart.jsx) array index was used as the key. According to the instructor this is okay when there are no unique identifiers available for the list items. For example the list items may not be unique (multiple identical items in the cart) and no other unique property exists to differentiate them.
 
 ## One Way Data Flow
 
