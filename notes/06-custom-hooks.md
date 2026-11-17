@@ -27,33 +27,3 @@ useDebugValue(pizzaOfTheDay ? `${pizzaOfTheDay.id}: ${pizzaOfTheDay.name}` : "lo
 ```
 
 You will see the string in the developer tools for that component. But the instructor uses this sparingly.
-
-## Why `onSubmit` instead of `onClick` for the form?
-
-This is because onSubmit handles both mouse clicks and using enter while also working better
-with screen readers and related accessibility technology.
-
-## A note on the `spread` operator
-
-```js
-// This is roughly equivalent to something like ++ in haskell in that ...cart adds all
-// of the elements from cart into a new array, adds the items defined in the remaining
-// elements (in this case one) and returns a new array. This is not a function it is an
-// array definition, it just feels like a function kind of. This syntax is actually
-// pretty ridiculous if I am being honest.
-setCart([...cart, { pizza: selectedPizza, size: pizzaSize, price }])
-```
-
-Other examples:
-
-```js
-// Add all items from oldItems along with 9, 10, 11, 12 to a new array
-const newItems = [...oldItems, 9, 10, 11, 12]
-
-// Add all items both oldItems arrays into a new array
-const newItems = [...oldItems1, ...oldItems2]
-```
-
-## Using array index for key - when is it okay?
-
-In [Cart.jsx](../src/Cart.jsx) array index was used as the key. According to the inustructor this is okay when there are no unique identifiers avaialble for the list items. For example the list items may not be unique (multiple identical items in the cart) and no other unique property exists to differentiate them.
