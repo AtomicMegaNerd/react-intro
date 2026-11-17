@@ -1,17 +1,22 @@
 import { useEffect, useState, useContext } from "react"
-import Pizza from "./Pizza"
-import Cart from "./Cart"
-import { CartContext } from "./contexts"
+import { createLazyFileRoute } from "@tanstack/react-router"
+import Pizza from "../Pizza"
+import Cart from "../Cart"
+import { CartContext } from "../contexts"
 
 // This Internationalization code is now built-in to browsers
-const intl = new Intl.NumberFormat("en-ca", {
+const intl = new Intl.NumberFormat("en-CA", {
   style: "currency",
   currency: "CAD",
 })
 
+export const Route = createLazyFileRoute("/order")({
+  component: Order,
+})
+
 // Named function (not arrow function) when the app crashes the Order _function_ will show up in
 // the stack trace.
-export default function Order() {
+function Order() {
   // Rules:
   // React depends on the order we declare these. Never put these inside of loops or
   // conditionals. They must run in the same order each time.
