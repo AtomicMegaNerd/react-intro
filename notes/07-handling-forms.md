@@ -29,3 +29,9 @@ const newItems = [...oldItems1, ...oldItems2]
 ## Using array index for key - when is it okay?
 
 In [Cart.jsx](../src/Cart.jsx) array index was used as the key. According to the inustructor this is okay when there are no unique identifiers avaialble for the list items. For example the list items may not be unique (multiple identical items in the cart) and no other unique property exists to differentiate them.
+
+## One Way Data Flow
+
+React only allows data to flow from parent to child. Modifying the data passed from the parent in the child is not okay in React. When a component (not always the direct parent) creates a prop and passes it to a child, the parent that created the prop still owns that prop. Only it (the owning component) can make changes.
+
+The instructor referred to this as one-way data flow.

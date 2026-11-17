@@ -22,6 +22,8 @@ export default function Order() {
 
   async function checkout() {
     setLoading(true)
+    // We don't need useEffect here because this is triggered by an onClick event from the user and so
+    // is not tied to the render lifecycle
     await fetch("/api/order", {
       method: "POST",
       headers: {
