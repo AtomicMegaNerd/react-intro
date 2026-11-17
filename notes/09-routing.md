@@ -35,3 +35,16 @@ Just name the file `*.lazy.jsx` using a lower case name unlike React components 
 ```text
 order.lazy.jsx
 ```
+
+## Links
+
+Because this is client side routing we need to use the `Link` component instead of standard `<a href ...>` tags.
+
+```jsx
+import { Link } from "@tanstack/react-router"
+
+function Index() {
+  // Imagine other tags here this is a toy example
+  return <Link to="/order">Order</Link>
+})
+```
