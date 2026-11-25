@@ -65,4 +65,29 @@ In this case `data` is an array so in the component we can:
 ```
 
 > [!NOTE]
-> The key here is different. This is just the key React uses to know when orders are added, removed, or re-ordered for each render. See [05-Effects - Keys](05-effects.md#keys).
+> The key here is different. This is just the key React uses to know when orders are added, removed, or re-ordered for each render. See [05 Effects - Keys](05-effects.md#keys).
+
+## React Ecosystem Q&A
+
+- Instructor recommends to always use `@tanstack/react-query` for doing fetching data from an API.
+- `useEffect` still has its place, he mentioned analytics effect, local state, etc.
+- Putting query code in a custom hook? In this case he is not going to write tests for react query, as the library is so well tested already. However, if he has a series of requests that have to fire in a sequence he might use a custom hook for that to enable easier testing. See [06 Custon Hooks](./06-custom-hooks.md).
+
+### CSS
+
+He does not cover some other basics like CSS as he stated its easy to add those once the ideas of React are mastered. He also says the CSS landscape is very fractured. He likes to write direct CSS for his components like this:
+
+```jsx
+// Other imports
+import "./PizzaOfTheDay.css"
+
+const PizzaOfTheDay = () => {
+  // component code
+}
+```
+
+He creates directories for each component with the jsx, tests, and css. This is a good pattern to follow.
+
+### Tailwind
+
+He covers Tailwind in Intermediate React v5 but these days he prefers raw CSS. This is just preference however. He does recognize that it has its place esp. if you want to simplify styling.
