@@ -5,10 +5,20 @@ import { priceConverter } from "../useCurrency"
 import getPastOrders from "../api/getPastOrders"
 import getPastOrder from "../api/getPastOrder"
 import Modal from "../Modal"
+import ErrorBoundary from "../ErrorBoundary"
 
 export const Route = createLazyFileRoute("/past")({
-  component: PastOrdersRoute,
+  component: ErrorBoundaryWrappedPastOrderRoutes,
 })
+
+// Wrapping PastOrdersRoute outside of the Component function so we can handle the error
+function ErrorBoundaryWrappedPastOrderRoutes() {
+  return (
+    <ErrorBoundary>
+      <PastOrdersRoute />
+    </ErrorBoundary>
+  )
+}
 
 function PastOrdersRoute() {
   const [page, setPage] = useState(1)
@@ -38,6 +48,9 @@ function PastOrdersRoute() {
   }
 
   return (
+    // If I try to put <ErrorBoundary> ... </ErrorBoundary> here wrapping this div the whole
+    // component will blow up. So I have to put the ErrorBoundary wrapping besides this component.
+    // Then I can wrap the child component. (see above)
     <div className="past-orders">
       <table>
         <thead>
