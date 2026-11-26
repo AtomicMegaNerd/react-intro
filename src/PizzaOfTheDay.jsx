@@ -1,5 +1,5 @@
 import { usePizzaOfTheDay } from "./usePizzaOfTheDay"
-import useCurrency from "./useCurrency"
+import { useCurrency } from "./useCurrency"
 
 const PizzaOfTheDay = () => {
   const pizzaOfTheDay = usePizzaOfTheDay()

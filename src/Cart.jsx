@@ -1,4 +1,4 @@
-import useCurrency from "useCurrency"
+import { useCurrency } from "./useCurrency"
 
 // He used a structured form here passing in an object for props?
 export default function Cart({ cart, checkout }) {

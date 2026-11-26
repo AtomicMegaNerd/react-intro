@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useQuery } from "@tanstack/react-query"
 import { createLazyFileRoute } from "@tanstack/react-router"
+import { priceConverter } from "../useCurrency"
 import getPastOrders from "../api/getPastOrders"
 import getPastOrder from "../api/getPastOrder"
-import { priceConverter } from "../useCurrency"
 import Modal from "../Modal"
 
 export const Route = createLazyFileRoute("/past")({
@@ -22,7 +22,7 @@ function PastOrdersRoute() {
 
   const { isLoading: isLoadingPastOrder, data: pastOrderData } = useQuery({
     queryKey: ["past-order", focusedOrder],
-    queryFn: () => getPastOrder,
+    queryFn: () => getPastOrder(focusedOrder),
     staleTime: 24 * 60 * 60 * 1000,
     // Can also use !!focusedOrder :-P, either approach converts the value to its
     // explicit Boolean equivalent (true or false), avoiding implied truthiness.
@@ -52,7 +52,9 @@ function PastOrdersRoute() {
             tags. */}
           {data.map((order) => (
             <tr key={order.order_id}>
-              <td>{order.order_id}</td>
+              <td>
+                <button onClick={() => setFocusedOrder(order.order_id)}>{order.order_id}</button>
+              </td>
               <td>{order.date}</td>
               <td>{order.time}</td>
             </tr>
