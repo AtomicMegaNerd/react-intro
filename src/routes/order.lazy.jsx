@@ -3,12 +3,7 @@ import { createLazyFileRoute } from "@tanstack/react-router"
 import Pizza from "../Pizza"
 import Cart from "../Cart"
 import { CartContext } from "../contexts"
-
-// This Internationalization code is now built-in to browsers
-const intl = new Intl.NumberFormat("en-CA", {
-  style: "currency",
-  currency: "CAD",
-})
+import useCurrency from "../useCurrency"
 
 export const Route = createLazyFileRoute("/order")({
   component: Order,
@@ -49,7 +44,7 @@ function Order() {
   if (!loading) {
     // This will be the correct pizza object from our API
     selectedPizza = pizzaTypes.find((pizza) => pizzaType === pizza.id)
-    price = intl.format(selectedPizza.sizes ? selectedPizza.sizes[pizzaSize] : "")
+    price = useCurrency(selectedPizza.sizes ? selectedPizza.sizes[pizzaSize] : "")
   }
 
   // This is an impure function, we don't want to run this every time the component is rendered

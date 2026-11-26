@@ -1,7 +1,4 @@
-const intl = new Intl.NumberFormat("en-CA", {
-  style: "currency",
-  currency: "CAD",
-})
+import useCurrency from "useCurrency"
 
 // He used a structured form here passing in an object for props?
 export default function Cart({ cart, checkout }) {
@@ -22,7 +19,7 @@ export default function Cart({ cart, checkout }) {
           </li>
         ))}
       </ul>
-      <p>Total: {intl.format(total)}</p>
+      <p>Total: {useCurrency(total)}</p>
       <button onClick={checkout}>Checkout</button>
     </div>
   )
