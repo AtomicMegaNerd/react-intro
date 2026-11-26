@@ -14,7 +14,7 @@ It allows rendering outside of our app
 import { useEffect, useRef } from "react"
 import { createPortal } from "react-dom"
 
-export default const Modal = ({ children }) => {
+const Modal = ({ children }) => {
   const elRef = useRef(null)
   if (!elRef.current) {
     elRef.current = document.createElement("div")
@@ -30,10 +30,12 @@ export default const Modal = ({ children }) => {
 
   return createPortal(<div>{children}</div>, elRef.current)
 }
+
+export default Modal
 ```
 
 - A `ref` is a reference to something that will always remain the same as the page is repeatedly re-rendered. Here we are creating a `<div>` element once, and then the ref holds a reference to that same div from that point forward.
-- In the `useEffect` hook the return value is the clean-up function that will remvove the child we appended when the component is unmounted. Otherwise we will have a memory leak. See [05 Effects - Cleanup Function](./05-effects.md#cleanup-function).
+- In the `useEffect` hook the return value is the clean-up function that will remove the child we appended when the component is unmounted. Otherwise we will have a memory leak. See [05 Effects - Cleanup Function](./05-effects.md#cleanup-function).
 
 ## Notes on the Implementation
 
